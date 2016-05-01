@@ -19,7 +19,8 @@ function gulpJSON() {
     parsedJson = JSON.parse(file.contents)	
 			
     var that = this;
-    var count = Object.keys(parsedJson).length
+    var keys = Object.keys(parsedJson);
+    var count = keys.length;
 	function getJSON(key){
 		request(parsedJson[key],function(error,response,body){
 			var coffeeFile = new File({
@@ -32,9 +33,7 @@ function gulpJSON() {
 			--count || cb(); 
     	});
 	}
-    for(key in parsedJson){
-    	getJSON(key)
-    }
+    keys.map(getJSON);
 
   });
 
