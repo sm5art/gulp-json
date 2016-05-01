@@ -23,14 +23,19 @@ function gulpJSON() {
     var count = keys.length;
 	function getJSON(key){
 		request(parsedJson[key],function(error,response,body){
-			var coffeeFile = new File({
-  			cwd: "/",
-  			base: "/",
-  			path: "/"+key+".json",
-  			contents: new Buffer(body)
-  			});
-			that.push(coffeeFile);
-			--count || cb(); 
+			if(!error){
+				var jsonFile = new File({
+  					cwd: "/",
+  					base: "/",
+  					path: "/"+key+".json",
+  					contents: new Buffer(body)
+  				});
+				that.push(jsonFile);
+				--count || cb(); 
+			}
+			else {
+				that.emit('error', new PluginError(PLUGIN_NAME, 'Request to url failed.'));
+			}
     	});
 	}
     keys.map(getJSON);

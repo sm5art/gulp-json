@@ -1,28 +1,34 @@
 {
   "name": "gulp-json",
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.1.0",
+  "description": "A wrapper to automatically request and place all api json files into your application",
   "main": "index.js",
   "dependencies": {
     "gulp-util": "^3.0.7",
-    "gulp": "^3.9.1",
-    "through2": "^2.0.1"
-  },
-  "devDependencies": {
-    "gulp-util": "^3.0.7",
-    "request": "^2.72.0",
     "through2": "^2.0.1",
+    "request": "^2.72.0",
     "vinyl": "^1.1.1"
+    },
+  "devDependencies": {
+    "gulp":"^3.6.2"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords":[
+  "gulp",
+  "gulpplugin",
+  "gulpfriendly",
+  "pipeline",
+  "apifriendly",
+  "api"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sm5art/gulp-json.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Artur Kashperskiy",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/sm5art/gulp-json/issues"
   },

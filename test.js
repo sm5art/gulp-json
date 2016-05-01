@@ -1,8 +1,7 @@
 var gulp = require('gulp');
-var gulpPrefixer = require('./index');
+var gulpJson = require('./index');
 
-gulp.task('update-api', ()=> {
-return gulp.src('wow.json')
-  .pipe(gulpPrefixer())
-  .pipe(gulp.dest('jsons'));
-});
+
+ gulp.src('api.json')
+  .pipe(gulpJson())
+  .pipe(gulp.dest('api'));
