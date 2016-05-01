@@ -1,0 +1,30 @@
+{
+  "name": "gulp-json",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "gulp-util": "^3.0.7",
+    "gulp": "^3.9.1",
+    "through2": "^2.0.1"
+  },
+  "devDependencies": {
+    "gulp-util": "^3.0.7",
+    "request": "^2.72.0",
+    "through2": "^2.0.1",
+    "vinyl": "^1.1.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sm5art/gulp-json.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sm5art/gulp-json/issues"
+  },
+  "homepage": "https://github.com/sm5art/gulp-json#readme"
+}
